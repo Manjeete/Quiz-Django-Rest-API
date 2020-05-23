@@ -25,7 +25,7 @@ class QuestionSerializer(serializers.ModelSerializer):
 
 class QuizSerializer(serializers.ModelSerializer):
     questions = QuestionSerializer(many=True)
-    user = QuizUserDetailSerializer(read_only=True)
+    # user = QuizUserDetailSerializer(read_only=True)
 
     class Meta:
         model = Quiz
