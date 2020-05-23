@@ -29,8 +29,8 @@ class QuizSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Quiz
-        fields = ['id','user', 'name', 'questions_count', 'questions']
-        read_only_fields = ['user']
+        fields = ['id','user', 'name', 'questions_count', 'created', 'description', 'questions']
+        read_only_fields = ['user','created']
 
     def create(self, validated_data):
         questions = validated_data.pop('questions', None)
@@ -50,6 +50,7 @@ class QuizSerializer(serializers.ModelSerializer):
         questions = (instance.questions).all()
         questions = list(questions)
         instance.name = validated_data.get('name', instance.name)
+        instance.description = validated_data.get('description', instance.description)
         instance.questions_count = validated_data.get('questions_count', instance.questions_count)
         instance.save()
         if questions_data is not None:
