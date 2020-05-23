@@ -32,6 +32,13 @@ class QuizSerializer(serializers.ModelSerializer):
         fields = ['id','user', 'name', 'questions_count', 'created', 'description', 'questions']
         read_only_fields = ['user','created']
 
+    def validate_description(self, value):
+        if len(value) < 200:
+            raise serializers.ValidationError("Description will be minimum 200 character")
+        if len(value) > 1200:
+            raise serializers.ValidationError("Description will be maximum 1200 character")
+        return value    
+
     def create(self, validated_data):
         questions = validated_data.pop('questions', None)
         quiz = Quiz.objects.create(**validated_data)
