@@ -15,7 +15,7 @@ SECRET_KEY = 'd)#s+*7+o$ixlw**@8dl4khsr^loqgbkkc0&8ox+2fflrge=sn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,6 +76,11 @@ DATABASES = {
 }
 
 
+# add this
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -117,3 +122,4 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
