@@ -6,6 +6,7 @@ This is an API for multiple-choice questions. Where You can GET, POST, PUT, PATC
 
 - **User Register**
 - **User Login**
+- **Getting List Data**
 - **Post You Quizs, Questions and, Answers**
 - **Retrieve, Update, and Delete single Quiz**
 - **User's own Quiz**
@@ -56,3 +57,13 @@ data : {
 	"password":"<password>",
 }
 ```
+```python
+Response:
+{
+    "token": "<user_token>",
+    "user":"<user_name",
+    "expires": "2020-06-09T11:41:41.268925Z"
+}
+
+```
+Getting token after login and register is used to post the data. This token is going to pass in **headers** for **authorization** purposes.
