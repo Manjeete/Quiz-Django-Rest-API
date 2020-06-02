@@ -240,3 +240,20 @@ https://quizrestapi.herokuapp.com/api/user/<username>/quizs/
 
 
 ```
+```javascript
+Response:
+{
+    "id": 2,
+    "username": "<username>",
+    "uri": "api/users/2",
+    "quizs": [
+        {
+            "id": 1,
+            "name": "Biology",
+            "description": "If the user is already registered  and has a usernamIf the user is already registered  and has a username and password then can log in using the following endpoint and data:If the user is already registered  and has a username and password then can log in using the following endpoint and data:If the user is already registered  and has a username and password then can log in using the following endpoint and data:",
+            "created": "2020-06-02T14:11:28.467741Z"
+        }
+    ]
+}
+
+```
