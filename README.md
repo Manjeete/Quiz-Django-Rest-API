@@ -18,3 +18,13 @@ Register Endpoint (Only Post Request)
 
 https://quizrestapi.herokuapp.com/api/auth/register/
 ```
+```python
+data : {
+    
+	"username":"user",
+	"email":"email@gmail.com",
+	"password":"user",
+	"password2":"user"
+}
+
+```
