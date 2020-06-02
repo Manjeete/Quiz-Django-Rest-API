@@ -171,7 +171,7 @@ Answer Choices
 This answer is correct or not
 
 
-## Post You Quizs, Questions and, Answers
+## Post Your Quizs, Questions and, Answers
 To post the quiz, You have to pass token in the header that you got in after logi
 
 ```python
@@ -226,5 +226,17 @@ You can update and delete the quiz if you are the owner of that quiz.
 PUT, PATCH, DELETE Request
 
 https://quizrestapi.herokuapp.com/api/mcq/<id>/
+
+```
+
+## User's own Quiz
+Only Your quizzes
+
+```python
+GET request only
+
+https://quizrestapi.herokuapp.com/api/user/<username>/
+https://quizrestapi.herokuapp.com/api/user/<username>/quizs/
+
 
 ```
