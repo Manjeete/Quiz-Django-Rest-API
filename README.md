@@ -9,3 +9,12 @@ This is an API for multiple-choice questions. Where You can GET, POST, PUT, PATC
 - **Post You Quizs, Questions and, Answers**
 - **Retrieve, Update, and Delete single Quiz**
 - **User's own Quiz**
+
+## User Register
+User can register using the following Endpoint and own data
+
+```python
+Register Endpoint (Only Post Request)
+
+https://quizrestapi.herokuapp.com/api/auth/register/
+```
