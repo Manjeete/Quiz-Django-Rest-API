@@ -3,3 +3,9 @@ This is an API for multiple-choice questions. Where You can GET, POST, PUT, PATC
 
 
 ## Steps that You can do in this Rest API
+
+- **User Register**
+- **User Login**
+- **Post You Quizs, Questions and, Answers**
+- **Retrieve, Update, and Delete single Quiz**
+- **User's own Quiz**
