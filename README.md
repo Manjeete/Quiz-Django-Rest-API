@@ -39,3 +39,20 @@ After sending POST request user will  receive the following response :
 }
 
 ```
+Here the user is receiving a token that will use when they try to post data.
+
+## User Login
+If the user is already registered  and has a username and password then can log in using the following endpoint and data:
+
+```python
+Login Endpoint (Only Post Request)
+
+https://quizrestapi.herokuapp.com/api/auth/
+```
+```python
+data : {
+    
+	"username":"<username>",
+	"password":"<password>",
+}
+```
