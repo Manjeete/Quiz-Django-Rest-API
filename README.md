@@ -68,6 +68,7 @@ Response:
 ```
 Getting token after login and register is used to post the data. This token is going to pass in **headers** for **authorization** purposes.
 
+
 ## Getting List Data
 To retrieve a list of data, It is not necessary to login or register. Login is required to changes the data.
 ```python
@@ -168,3 +169,62 @@ Answer Choices
 **```is_correct```**
 *```Type - bool```*
 This answer is correct or not
+
+
+## Post You Quizs, Questions and, Answers
+To post the quiz, You have to pass token in the header that you got in after logi
+
+```python
+POST Request
+
+https://quizrestapi.herokuapp.com/api/mcq/
+
+```
+
+```javascript
+data : {
+    "name": "GK",
+    "questions_count": 10,
+    "description":"If the user is already registered  and has a usernamIf the user is already registered  and has a username and password then can log in using the following endpoint and data:If the user is already registered  and has a username and password then can log in using the following endpoint and data:If the user is already registered  and has a username and password then can log in using the following endpoint and data:",
+    "questions": [
+        {
+            "label": "Where is 'India Gate' ?",
+            "order": 1,
+            "answers": [
+                {
+                  
+                    "text": "Banglore",
+                    "is_correct": false
+                },
+                {
+                   
+                    "text": "Punjab",
+                    "is_correct": false
+                },
+                {
+                   
+                    "text": "Mumbai",
+                    "is_correct": false
+                },
+                {
+                   
+                    "text": "Delhi",
+                    "is_correct": true
+                }
+            ]
+        }
+        
+        
+    ]
+}
+```
+### Update, Delete 
+You can update and delete the quiz if you are the owner of that quiz.
+
+
+```python
+PUT, PATCH, DELETE Request
+
+https://quizrestapi.herokuapp.com/api/mcq/<id>/
+
+```
